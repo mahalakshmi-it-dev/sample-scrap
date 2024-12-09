@@ -43,7 +43,7 @@ async function scrapePurchaseItems() {
     
         if (errorMessage) {
             await browser.close();
-            throw new Error('Invalid username or password');
+            throw new Error('Invalid Email or password');
         }
     
         console.log('Login successful!');
