@@ -43,7 +43,7 @@ async function scrapePurchaseItems() {
                 return 'Error! No orders placed yet';
             }
 
-            const tableRows = Array.from(document.querySelectorAll('tr'));
+            const tableRows = Array.from(document.querySelectorAll('.table--responsive tr'));
 
             const tableHeaders = Array.from(tableRows[0].querySelectorAll('th')).map(th => th.innerText.trim());
 
