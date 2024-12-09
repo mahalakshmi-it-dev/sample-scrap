@@ -12,6 +12,11 @@ async function scrapePurchaseItems() {
         const pwd : string = process.env.password?? '';
         const url : string = process.env.url?? '';
 
+        if (!email || !pwd || !url) {
+            console.error("Important environmental variables are missing");
+            process.exit(1);
+        }
+
         const page = await browser.newPage();
 
         // Navigate to the login page
